@@ -1,0 +1,127 @@
+[gd_scene load_steps=18 format=3 uid="uid://g8dcq6hg7j73"]
+
+[ext_resource type="Script" uid="uid://f8fey6j007an" path="res://src/virtual_buttons.gd" id="1_45h0h"]
+[ext_resource type="Texture2D" uid="uid://dqu72srh4mp77" path="res://assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Square 1.png" id="2_ws6yq"]
+[ext_resource type="Texture2D" uid="uid://fc07xvhqrgx2" path="res://assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Square 2.png" id="3_5p26t"]
+[ext_resource type="Texture2D" uid="uid://vrxm8efg8apo" path="res://assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Triangle 1.png" id="4_eygjl"]
+[ext_resource type="Texture2D" uid="uid://d1mdnf15wod4h" path="res://assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS R1.png" id="5_mbcvy"]
+[ext_resource type="Texture2D" uid="uid://dfvalfjb42cgq" path="res://assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Triangle 2.png" id="5_ws6yq"]
+[ext_resource type="Texture2D" uid="uid://ducspbfujrhpx" path="res://assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS L1.png" id="6_yfn7x"]
+[ext_resource type="Texture2D" uid="uid://c5drcbpm3qraf" path="res://assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS R1 – 2.png" id="7_n73ki"]
+[ext_resource type="Texture2D" uid="uid://cwduw66t5ksoq" path="res://assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Cross 1.png" id="7_qg3t4"]
+[ext_resource type="Texture2D" uid="uid://ohbfwug8httm" path="res://assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Circle 1.png" id="8_n73ki"]
+[ext_resource type="Texture2D" uid="uid://dni47ake2ngm5" path="res://assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS L1 – 2.png" id="9_2njhb"]
+[ext_resource type="Texture2D" uid="uid://c66pjmrtpqfsl" path="res://assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS R2.png" id="9_05fkw"]
+[ext_resource type="Texture2D" uid="uid://dvhx0rv6b87ph" path="res://assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS L2.png" id="10_2njhb"]
+[ext_resource type="Texture2D" uid="uid://xfnfta7ihyq7" path="res://assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Cross 2.png" id="11_ukhf2"]
+[ext_resource type="Texture2D" uid="uid://dmivp5na4ja76" path="res://assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Circle 2.png" id="13_bvbi0"]
+[ext_resource type="Texture2D" uid="uid://4yg82a48lofp" path="res://assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS R2 – 2.png" id="15_fc4pp"]
+[ext_resource type="Texture2D" uid="uid://cyursita47rk8" path="res://assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS L2 – 2.png" id="17_g35kg"]
+
+[node name="VirtualButtons" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_45h0h")
+
+[node name="Square" type="Node2D" parent="."]
+
+[node name="Unpressed" type="Sprite2D" parent="Square"]
+position = Vector2(96, 96)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_ws6yq")
+
+[node name="Pressed" type="Sprite2D" parent="Square"]
+visible = false
+position = Vector2(96, 96)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_5p26t")
+
+[node name="Triangle" type="Node2D" parent="."]
+
+[node name="Unpressed" type="Sprite2D" parent="Triangle"]
+position = Vector2(168, 87)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("4_eygjl")
+
+[node name="Pressed" type="Sprite2D" parent="Triangle"]
+visible = false
+position = Vector2(168, 88)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("5_ws6yq")
+
+[node name="R1" type="Node2D" parent="."]
+
+[node name="Unpressed" type="Sprite2D" parent="R1"]
+position = Vector2(240, 87)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("5_mbcvy")
+
+[node name="Pressed" type="Sprite2D" parent="R1"]
+visible = false
+position = Vector2(240, 88)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("7_n73ki")
+
+[node name="L1" type="Node2D" parent="."]
+
+[node name="Unpressed" type="Sprite2D" parent="L1"]
+position = Vector2(312, 87)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_yfn7x")
+
+[node name="Pressed" type="Sprite2D" parent="L1"]
+visible = false
+position = Vector2(312, 88)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("9_2njhb")
+
+[node name="Cross" type="Node2D" parent="."]
+
+[node name="Unpressed" type="Sprite2D" parent="Cross"]
+position = Vector2(96, 176)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("7_qg3t4")
+
+[node name="Pressed" type="Sprite2D" parent="Cross"]
+visible = false
+position = Vector2(96, 176)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("11_ukhf2")
+
+[node name="Circle" type="Node2D" parent="."]
+
+[node name="Unpressed" type="Sprite2D" parent="Circle"]
+position = Vector2(168, 167)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("8_n73ki")
+
+[node name="Pressed" type="Sprite2D" parent="Circle"]
+visible = false
+position = Vector2(168, 168)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("13_bvbi0")
+
+[node name="R2" type="Node2D" parent="."]
+
+[node name="Unpressed" type="Sprite2D" parent="R2"]
+position = Vector2(240, 168)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("9_05fkw")
+
+[node name="Pressed" type="Sprite2D" parent="R2"]
+visible = false
+position = Vector2(240, 168)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("15_fc4pp")
+
+[node name="L2" type="Node2D" parent="."]
+
+[node name="Unpressed" type="Sprite2D" parent="L2"]
+position = Vector2(312, 168)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("10_2njhb")
+
+[node name="Pressed" type="Sprite2D" parent="L2"]
+visible = false
+position = Vector2(312, 168)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("17_g35kg")
