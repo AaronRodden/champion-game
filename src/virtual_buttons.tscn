@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://g8dcq6hg7j73"]
+[gd_scene load_steps=19 format=3 uid="uid://g8dcq6hg7j73"]
 
 [ext_resource type="Script" uid="uid://f8fey6j007an" path="res://src/virtual_buttons.gd" id="1_45h0h"]
 [ext_resource type="Texture2D" uid="uid://dqu72srh4mp77" path="res://assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Square 1.png" id="2_ws6yq"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dmivp5na4ja76" path="res://assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Circle 2.png" id="13_bvbi0"]
 [ext_resource type="Texture2D" uid="uid://4yg82a48lofp" path="res://assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS R2 – 2.png" id="15_fc4pp"]
 [ext_resource type="Texture2D" uid="uid://cyursita47rk8" path="res://assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS L2 – 2.png" id="17_g35kg"]
+[ext_resource type="Texture2D" uid="uid://civmivp62bra8" path="res://assets/Mousepointer.png" id="18_05fkw"]
 
 [node name="VirtualButtons" type="Node2D"]
 scale = Vector2(2, 2)
@@ -125,3 +126,18 @@ visible = false
 position = Vector2(312, 168)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("17_g35kg")
+
+[node name="MappingButton" type="Button" parent="."]
+offset_left = 112.0
+offset_top = 252.0
+offset_right = 272.0
+offset_bottom = 284.0
+text = "Map Inputs"
+
+[node name="RemapPointer" type="Sprite2D" parent="."]
+visible = false
+rotation = -2.35619
+scale = Vector2(3.3, 3.3)
+texture = ExtResource("18_05fkw")
+
+[connection signal="pressed" from="MappingButton" to="." method="_on_mapping_button_pressed"]
