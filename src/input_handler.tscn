@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://whg3mbueso8d"]
+
+[ext_resource type="Script" uid="uid://drga127lhp5sj" path="res://src/input_handler.gd" id="1_xvb4v"]
+
+[node name="InputHandler" type="Node"]
+script = ExtResource("1_xvb4v")
+
+[node name="InputHistory" type="RichTextLabel" parent="."]
+offset_left = 896.0
+offset_top = 32.0
+offset_right = 1064.0
+offset_bottom = 600.0
+text = "button 2
+button 1"
+fit_content = true
+scroll_active = false
+scroll_following = true
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="SpecialMoveHistory" type="RichTextLabel" parent="."]
+offset_left = 352.0
+offset_top = 80.0
+offset_right = 688.0
+offset_bottom = 112.0
+text = "Last special move input: "
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

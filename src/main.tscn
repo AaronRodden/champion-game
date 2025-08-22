@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dojxqv6qneogk"]
+[gd_scene load_steps=4 format=3 uid="uid://dojxqv6qneogk"]
 
 [ext_resource type="PackedScene" uid="uid://di5w0wbs30nhq" path="res://src/virtual_joystick.tscn" id="1_eewff"]
 [ext_resource type="PackedScene" uid="uid://g8dcq6hg7j73" path="res://src/virtual_buttons.tscn" id="2_gh0ne"]
+[ext_resource type="PackedScene" uid="uid://whg3mbueso8d" path="res://src/input_handler.tscn" id="3_5q4o7"]
 
 [node name="Main" type="Node"]
 
 [node name="VirtualJoystick" parent="." instance=ExtResource("1_eewff")]
-position = Vector2(200, 280)
+position = Vector2(208, 328)
 
 [node name="VirtualButtons" parent="." instance=ExtResource("2_gh0ne")]
-position = Vector2(328, 0)
+position = Vector2(320, 64)
+scale = Vector2(1.605, 1.605)
+
+[node name="InputHandler" parent="." instance=ExtResource("3_5q4o7")]
